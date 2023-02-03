@@ -23,16 +23,24 @@
      * ```html 
         <!DOCTYPE html>
        ```
-        * Serve para informar qual versão do html estamos usando
+        * Serve para informar qual versão do html estamos usando.
      * ```html 
         <html lang="pt-br">
        ```
-        *  A ideia do uso dele é normatizar e indicar os tipos de dados pra quem tiver interesse, se não houver esse atributo plugins, google tradutor ou buscadores irão ter dificuldades em detectar o idioma do texto apresentado
+        *  A ideia do uso dele é normatizar e indicar os tipos de dados pra quem tiver interesse, se não houver esse atributo plugins, google tradutor ou buscadores irão ter dificuldades em detectar o idioma do texto apresentado.
      * ```html 
         <meta charset="UTF-8">
        ```
-        * A tag meta serve para passar as informações para o navegador. Já a propriedade charset é um dicionário que possui todas as linguagens. Um exemplo é que no inglês não temos acento nem "Ç", esse dicionário uni a maioria das linguas permitindo a existência de diversos caracteres
+        * A tag meta serve para passar as informações para o navegador. Já a propriedade charset é um dicionário que possui todas as linguagens. Um exemplo é que no inglês não temos acento nem "Ç", esse dicionário uni a maioria das linguas permitindo a existência de diversos caracteres e que os demais usuários vejam o site com o dicionário correto.
      * ```html 
         <title>Aprendendo HTML e CSS</title>
        ```
-        * Permite escolher o nome da página
+        * Permite escolher o nome da página.
+     * ```html 
+        <head></head>
+       ```
+        * Informações que passamos pro navegador.
+     * ```html 
+        <body></body>
+       ```
+        * Informações que quermos exibir na página.
