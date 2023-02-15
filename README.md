@@ -44,3 +44,40 @@
         <body></body>
        ```
         * Informações que quermos exibir na página.
+<hr>
+
+#### 2° tópico: Formas de estilização ####
+  * Ao escrever um código HTML, conforme você vai desenvolvendo as tags elas vão ficando de um formato padrão do HTML, mas temos uma maneira de estilizar para assim seu projeto ficar do jeito que você quiser.
+  * Para isso utilizamos o CSS (Cascading Style Sheet, ou Folha de Estilo em Cascatas) que são basicamente linhas de códigos que atribuem algumas características as tags.
+  * Dentro do CSS temos 3 tipos de estilização: 
+    * CSS Inline: Na linha em que temos a nossa tag, adicionamos a propriedade do CSS. O CSS inline é usado para dar estilo a um elemento HTML específico. Para este estilo de CSS< você somente vai precisar adicionar o atributo style para cada tag HTML, sem usar os seletores. Este tipo de CSS não é realmente recomendado, já que cada tag HTML precisa ser estilizada de maneira individual.
+    
+      ```html 
+        <p style="font-size: 20px; color: aqua;"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes".</strong></em></p>
+      ```
+    * tag style: Nessa modo criamos uma tag style dentro da tag <head> e adicionamos as propriedades que cada tag terá. Nesse exemplo todas as tags <p> terão seu texto alinhado ao centro da página. 
+    
+      ```html
+       <head>
+          <meta charset="UTF-8"> 
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Aprendendo HTML e CSS</title> 
+          <style>
+              p {
+                  text-align: center;
+              }
+          </style>
+      </head>
+      ```
+    * Criando um arquivo CSS: 
+     
+      ```html
+       <head>
+          <meta charset="UTF-8"> 
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Aprendendo HTML e CSS</title> 
+          <link rel="stylesheet" href="style.css"> <!-- Essa tag puxa todas as característica que estarão no arquivo CSS pro HTML-->
+      </head>
+      ```
