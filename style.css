@@ -1,3 +1,17 @@
+body {
+    background: #CCCCCC;
+}
+
 h1 {
     font-size: 30px;
 }
+
+p {
+    text-align: center;
+}
+/* O que significa esse em antes do strong?
+    O nosso objetivo era deixar apenas o lema da nossa missão em vermelho, porém possuímos mais de uma tag strong no nosso arquivo HTML, então para evitar que outras coisas fiquem em vermelho nós precisamos especificar qual tag strong queremos mudar. Então se percebemos no nosso código html a tag strong está envolta de uma tag em, então é por causa disso que botamos o em antes, para especificar qual tag strong queremos mudar para vermelho*/
+em strong { 
+    color: red;
+}
+
