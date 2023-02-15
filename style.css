@@ -4,11 +4,19 @@ body {
 
 h1 {
     font-size: 30px;
+    text-align: center;
 }
 
 p {
     text-align: center;
 }
+
+/*O que significa esse #missao?
+    O nosso objetivo era deixar apenas o paragrafo da missão com o tamanho de 20px, porém se colocarmos isso em p, todos os outros p ficarão com esse mesmo tamanho. Para resolver isso no HTML adicionamos um id no paragrafo desejado, que no caso é o paragrafo da missão e adicionamos um nome a esse id. Após isso colocamos aqui no css #missao e botamos as características que ele vai ter, assim apenas esse paragrafo vai ficar com 20px*/
+#missao{
+    font-size: 20px
+}
+
 /* O que significa esse em antes do strong?
     O nosso objetivo era deixar apenas o lema da nossa missão em vermelho, porém possuímos mais de uma tag strong no nosso arquivo HTML, então para evitar que outras coisas fiquem em vermelho nós precisamos especificar qual tag strong queremos mudar. Então se percebemos no nosso código html a tag strong está envolta de uma tag em, então é por causa disso que botamos o em antes, para especificar qual tag strong queremos mudar para vermelho*/
 em strong { 
