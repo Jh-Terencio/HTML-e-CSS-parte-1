@@ -47,6 +47,8 @@ nav a{
     padding: 50px 0;
 }
 
+/*O que é esse box-sizing: border-box?
+    Quando criamos a estilização do nosso .produtos li, criamos ele com uma width de 30%, porém logo depois adicionamos um espaçamento interno ()*/
 .produtos li{
     display: inline-block;
     text-align: center;
