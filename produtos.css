@@ -3,12 +3,21 @@ header{
     padding: 20px 0;
 }
 
+/*O que é a propriedade position?
+    link do artigo: https://www.alura.com.br/artigos/entenda-a-propriedade-position-css#:~:text=luanalvess%2Fpen%2FqBPMyJB-,Relative,em%20sua%20posi%C3%A7%C3%A3o%20de%20refer%C3%AAncia.
+    position: relative (position relative, que em português significa relativo, é usado quando queremos alterar a posição de um elemento tendo como referência a posição inicial dele. Ao aplicarmos essa propriedade em um elemento, ele não muda de posição, pois já vai estar posicionado em sua posição de referência.)
+    */
 .caixa{
     width: 940px;
     position: relative;
     margin: 0 auto;
 }
 
+/*O que é a propriedade position?
+    link do artigo: https://www.alura.com.br/artigos/entenda-a-propriedade-position-css#:~:text=luanalvess%2Fpen%2FqBPMyJB-,Relative,em%20sua%20posi%C3%A7%C3%A3o%20de%20refer%C3%AAncia.
+    position: absolute (O primeiro é quando o elemento com essa propriedade possui um elemento pai de valor diferente de static. Neste caso, ele terá este elemento pai como referência para ser posicionado. Todo elemento pai que tiver qualquer valor de position, menos o static, será a referência para posicionar o elemento filho absolute!
+
+    O segundo comportamento é quando o elemento com position absolute não tem elemento pai, ou este elemento pai possui position static. Nesta situação, ele irá ignorar estes elementos e será posicionado a partir do canto esquerdo superior do documento, podendo até mesmo sobrepor a eles. Ou seja, é importante utilizar o absolute tendo certeza da necessidade do seu uso (não que isso não seja necessário para os outros valores), pois ele pode desalinhar o layout da página.)*/
 nav {
     position: absolute;
     top: 110px;
