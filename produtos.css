@@ -1,0 +1,20 @@
+header{
+    background-color: #BBBBBB;
+}
+
+nav li{
+    display: inline;
+    margin-left: 15px;
+}
+
+/*O que cada uma dessas tags faz?
+    text-transform: uppercase (transforma todas as letras em letras maiúsculas)
+    font-weight: bold (É o peso/intensidade da conte, nesse caso é negrito)
+    text-decoration: none (É usado para definir a formatação do texto, nesse caso é nenhuma)*/
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
