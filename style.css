@@ -11,8 +11,11 @@ body {
     padding: 30px;
 }
 
-h1 {
-    font-size: 30px;
+.titulo-principal{
+    padding-left: 20px;
+}
+
+.titulo-centralizado {
     text-align: center;
 }
 
@@ -43,9 +46,6 @@ em strong {
     padding: 20px;
 }
 
-h2{
-    text-align: center;
-}
 /*O que significa esse "display"?
 https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-inline-4ccb7b77371d#.8tcy3rrhg
 https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-block-98480c987950#.ko7z123q5
