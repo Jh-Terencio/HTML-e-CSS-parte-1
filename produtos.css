@@ -31,7 +31,7 @@ nav li{
 
 /*O que cada uma dessas tags faz?
     text-transform: uppercase (transforma todas as letras em letras maiúsculas)
-    font-weight: bold (É o peso/intensidade da conte, nesse caso é negrito)
+    font-weight: bold (É o peso/intensidade da fonte, nesse caso é negrito)
     text-decoration: none (É usado para definir a formatação do texto, nesse caso é nenhuma)*/
 nav a{
     text-transform: uppercase;
@@ -41,6 +41,13 @@ nav a{
     text-decoration: none;
 }
 
+/*O que significa esse nav a:hover?
+    Esse hover basicamente define o que acontecerá caso o usuário passe o mouse por cima do item. Nesse exemplo o texto mudará a cor para amarelo e ficará sublinhado*/
+nav a:hover{
+    color: #C78C19;
+    text-decoration: underline;
+}
+
 .produtos {
     width: 940px;
     margin: 0 auto;
@@ -48,7 +55,7 @@ nav a{
 }
 
 /*O que é esse box-sizing: border-box?
-    Quando criamos a estilização do nosso .produtos li, criamos ele com uma width de 30%, porém logo depois adicionamos um espaçamento interno ()*/
+    Quando criamos a estilização do nosso .produtos li, criamos ele com uma width de 30%, porém logo depois adicionamos um espaçamento interno (padding), por conta disso foi adicionando uma largura nesses 30%, então para resolver isso usamos esse box-sizing: border-box que basicamente define a largura como 30% independente de qualquer coisa*/
 .produtos li{
     display: inline-block;
     text-align: center;
@@ -57,6 +64,30 @@ nav a{
     margin: 0 1.5%;
     padding: 30px 20px;
     box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    
+    /*Esse border: 2px solid #000000; é equivalente a esses três
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;*/
+    
+}
+
+.produtos li:hover {
+    border-color: #C78C19;
+}
+
+/*O que significa esse .produtos li:active
+    Basicamente quando você clicar no li sua cor vai mudar para verde*/
+.produtos li:active {
+    border-color: #088C19;
+}
+
+/*O que significa esse .produtos li:hover h2?
+    Quando o mouse estiver por cima do li o h2 também será modificado. No de cima caso botassemos alguma caracteristica para o h2 nada mudaria*/
+.produtos li:hover h2 {
+    font-size: 34px;
 }
 
 .produtos h2 {
@@ -72,5 +103,19 @@ nav a{
     font-size: 22px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+/*O que significa background: url("images/bg.jpg");?
+    Bem, nem sempre queremos botar um cor no fundo da nossa tag, as vezes queremos botar só uma imagem. Para isso usamos essa propriedade que através da url vai adicionar uma imagem de fundo*/
+footer{
+    text-align: center;
+    background: url("images/bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 20px;
 }
 
