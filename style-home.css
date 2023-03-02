@@ -1,0 +1,83 @@
+body {
+    
+}
+
+#banner{
+    width: 100%;
+}
+
+.principal{
+    background: #CCCCCC;
+    padding: 30px;
+}
+
+.titulo-principal{
+    padding-left: 20px;
+}
+
+.titulo-centralizado {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+/*O que significa esse #missao?
+    O nosso objetivo era deixar apenas o paragrafo da missão com o tamanho de 20px, porém se colocarmos isso em p, todos os outros p ficarão com esse mesmo tamanho. Para resolver isso no HTML adicionamos um id no paragrafo desejado, que no caso é o paragrafo da missão e adicionamos um nome a esse id. Após isso colocamos aqui no css #missao e botamos as características que ele vai ter, assim apenas esse paragrafo vai ficar com 20px*/
+#missao{
+    font-size: 20px
+}
+
+/* O que significa esse em antes do strong?
+    O nosso objetivo era deixar apenas o lema da nossa missão em vermelho, porém possuímos mais de uma tag strong no nosso arquivo HTML, então para evitar que outras coisas fiquem em vermelho nós precisamos especificar qual tag strong queremos mudar. Então se percebemos no nosso código html a tag strong está envolta de uma tag em, então é por causa disso que botamos o em antes, para especificar qual tag strong queremos mudar para vermelho*/
+em strong { 
+    color: red;
+}
+
+/*Por que utilizamos o "." ou invés de "#"?
+    Quando vamos referenciar uma classe no CSS utilizamos "." ao invés de "#"*/
+.itens{
+    font-style: italic;
+}
+
+.beneficios{
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+/*O que significa esse "display"?
+https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-inline-4ccb7b77371d#.8tcy3rrhg
+https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-block-98480c987950#.ko7z123q5
+https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-inline-block-4e6cba2f19d4
+    Temos 3 tipos principais de display, display: inline,
+    display: block e display: inline-block
+        O display: inline, o valor inline permite que os elementos fiquem um do lado do outro, essa é a parte simples de perceber mas as propriedades width e height não funcionaram. Esse também é um comportamento do inline. Os elementos com inline não aceitam largura (width), nem altura (height), o tamanho do elemento é definido pelo conteúdo que ele contém. 
+
+        O display: block, todos os elementos definidos com display: block, aceitam as propriedades width e height. Todo elemento definido como block ocupa a linha inteira, ou seja, não deixa outro elemento ocupar a mesma linha que ele
+
+        O display: inline-block, Com display: inline-block nós conseguimos definir uma largura (width) e altura (height) da mesma forma que conseguimos com o display: block, esse é o único comportamento que o inline-block herda do block. Também conseguimos deixar um elemento do lado do outro, vulgo mesma linha, da mesma forma que fazemos com o display: inline, mas esse não é o único comportamento que o inline-block herda do inline. Quando um elemento é definido como display: inline-block ele também ganha o comportamento de uma palavra, esse é o segundo comportamento que herdamos do display: inline.
+*/
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagemBeneficios{
+    width: 50%;
+}
+
+footer{
+    text-align: center;
+    background: url("images/bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 20px;
+}
+

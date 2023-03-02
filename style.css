@@ -1,74 +1,112 @@
-body {
+header{
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+/*O que é a propriedade position?
+    link do artigo: https://www.alura.com.br/artigos/entenda-a-propriedade-position-css#:~:text=luanalvess%2Fpen%2FqBPMyJB-,Relative,em%20sua%20posi%C3%A7%C3%A3o%20de%20refer%C3%AAncia.
+    position: relative (position relative, que em português significa relativo, é usado quando queremos alterar a posição de um elemento tendo como referência a posição inicial dele. Ao aplicarmos essa propriedade em um elemento, ele não muda de posição, pois já vai estar posicionado em sua posição de referência.)
+    */
+.caixa{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/*O que é a propriedade position?
+    link do artigo: https://www.alura.com.br/artigos/entenda-a-propriedade-position-css#:~:text=luanalvess%2Fpen%2FqBPMyJB-,Relative,em%20sua%20posi%C3%A7%C3%A3o%20de%20refer%C3%AAncia.
+    position: absolute (O primeiro é quando o elemento com essa propriedade possui um elemento pai de valor diferente de static. Neste caso, ele terá este elemento pai como referência para ser posicionado. Todo elemento pai que tiver qualquer valor de position, menos o static, será a referência para posicionar o elemento filho absolute!
+
+    O segundo comportamento é quando o elemento com position absolute não tem elemento pai, ou este elemento pai possui position static. Nesta situação, ele irá ignorar estes elementos e será posicionado a partir do canto esquerdo superior do documento, podendo até mesmo sobrepor a eles. Ou seja, é importante utilizar o absolute tendo certeza da necessidade do seu uso (não que isso não seja necessário para os outros valores), pois ele pode desalinhar o layout da página.)*/
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin-left: 15px;
+}
+
+/*O que cada uma dessas tags faz?
+    text-transform: uppercase (transforma todas as letras em letras maiúsculas)
+    font-weight: bold (É o peso/intensidade da fonte, nesse caso é negrito)
+    text-decoration: none (É usado para definir a formatação do texto, nesse caso é nenhuma)*/
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/*O que significa esse nav a:hover?
+    Esse hover basicamente define o que acontecerá caso o usuário passe o mouse por cima do item. Nesse exemplo o texto mudará a cor para amarelo e ficará sublinhado*/
+nav a:hover{
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+/*O que é esse box-sizing: border-box?
+    Quando criamos a estilização do nosso .produtos li, criamos ele com uma width de 30%, porém logo depois adicionamos um espaçamento interno (padding), por conta disso foi adicionando uma largura nesses 30%, então para resolver isso usamos esse box-sizing: border-box que basicamente define a largura como 30% independente de qualquer coisa*/
+.produtos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    
+    /*Esse border: 2px solid #000000; é equivalente a esses três
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;*/
     
 }
 
-#banner{
-    width: 100%;
+.produtos li:hover {
+    border-color: #C78C19;
 }
 
-.principal{
-    background: #CCCCCC;
-    padding: 30px;
+/*O que significa esse .produtos li:active
+    Basicamente quando você clicar no li sua cor vai mudar para verde*/
+.produtos li:active {
+    border-color: #088C19;
 }
 
-.titulo-principal{
-    padding-left: 20px;
+/*O que significa esse .produtos li:hover h2?
+    Quando o mouse estiver por cima do li o h2 também será modificado. No de cima caso botassemos alguma caracteristica para o h2 nada mudaria*/
+.produtos li:hover h2 {
+    font-size: 34px;
 }
 
-.titulo-centralizado {
-    text-align: center;
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
 }
 
-p {
-    text-align: center;
+.produto-descricao {
+    font-size: 18px;
 }
 
-/*O que significa esse #missao?
-    O nosso objetivo era deixar apenas o paragrafo da missão com o tamanho de 20px, porém se colocarmos isso em p, todos os outros p ficarão com esse mesmo tamanho. Para resolver isso no HTML adicionamos um id no paragrafo desejado, que no caso é o paragrafo da missão e adicionamos um nome a esse id. Após isso colocamos aqui no css #missao e botamos as características que ele vai ter, assim apenas esse paragrafo vai ficar com 20px*/
-#missao{
-    font-size: 20px
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-/* O que significa esse em antes do strong?
-    O nosso objetivo era deixar apenas o lema da nossa missão em vermelho, porém possuímos mais de uma tag strong no nosso arquivo HTML, então para evitar que outras coisas fiquem em vermelho nós precisamos especificar qual tag strong queremos mudar. Então se percebemos no nosso código html a tag strong está envolta de uma tag em, então é por causa disso que botamos o em antes, para especificar qual tag strong queremos mudar para vermelho*/
-em strong { 
-    color: red;
-}
-
-/*Por que utilizamos o "." ou invés de "#"?
-    Quando vamos referenciar uma classe no CSS utilizamos "." ao invés de "#"*/
-.itens{
-    font-style: italic;
-}
-
-.beneficios{
-    background-color: #FFFFFF;
-    padding: 20px;
-}
-
-/*O que significa esse "display"?
-https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-inline-4ccb7b77371d#.8tcy3rrhg
-https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-block-98480c987950#.ko7z123q5
-https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-inline-block-4e6cba2f19d4
-    Temos 3 tipos principais de display, display: inline,
-    display: block e display: inline-block
-        O display: inline, o valor inline permite que os elementos fiquem um do lado do outro, essa é a parte simples de perceber mas as propriedades width e height não funcionaram. Esse também é um comportamento do inline. Os elementos com inline não aceitam largura (width), nem altura (height), o tamanho do elemento é definido pelo conteúdo que ele contém. 
-
-        O display: block, todos os elementos definidos com display: block, aceitam as propriedades width e height. Todo elemento definido como block ocupa a linha inteira, ou seja, não deixa outro elemento ocupar a mesma linha que ele
-
-        O display: inline-block, Com display: inline-block nós conseguimos definir uma largura (width) e altura (height) da mesma forma que conseguimos com o display: block, esse é o único comportamento que o inline-block herda do block. Também conseguimos deixar um elemento do lado do outro, vulgo mesma linha, da mesma forma que fazemos com o display: inline, mas esse não é o único comportamento que o inline-block herda do inline. Quando um elemento é definido como display: inline-block ele também ganha o comportamento de uma palavra, esse é o segundo comportamento que herdamos do display: inline.
-*/
-ul{
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
-}
-
-.imagemBeneficios{
-    width: 50%;
-}
-
+/*O que significa background: url("images/bg.jpg");?
+    Bem, nem sempre queremos botar um cor no fundo da nossa tag, as vezes queremos botar só uma imagem. Para isso usamos essa propriedade que através da url vai adicionar uma imagem de fundo*/
 footer{
     text-align: center;
     background: url("images/bg.jpg");
